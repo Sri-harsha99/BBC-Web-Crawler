@@ -60,28 +60,5 @@ def printHeadlineIfEnglish(language):
                 print title["content"] + "," + section["content"], url
 
 # while loop that stops if queue is empty or reached 10,000 links
-while not emptyQueue:
-    # BOOLEAN TO CHECK IF LINK IS VALID
-    newLink = False
-    # GET NEXT LINK FROM QUEUE
-    # while loop that aids in getting next link or checks if the queue is empty
-    while not newLink:
-        # IF QUEUE IS EMPTY
-        if links.empty():
-            # NOTIFY THE USER
-            print "the queue is empty"
-            # SET EMPTYQUEUE BOOLEAN AS TRUE, the program stops
-            emptyQueue = True
-        else:
-            # GET A NEW LINK
-            url = links.get()
-        try:
-            # get the html code using python library
-            html = urllib2.urlopen(url)
-            # SET NEWLINK BOOLEAN AS TRUE AND USE THE LINK
-            newLink = True
-            # get a new link, go through the same tests
-        except:
-             pass
 
 
