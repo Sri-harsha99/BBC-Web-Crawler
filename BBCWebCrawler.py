@@ -84,12 +84,4 @@ while not emptyQueue:
         except:
              pass
 
-    # create a soup object to get tags
-    soup = BeautifulSoup(html, "html.parser")
 
-    for link in soup.find_all('a'):
-        link = str(link.get('href'))
-        addLinkToQueueIfValid(link)
-
-    language = soup.find("html", attrs={"lang": True})
-    printHeadlineIfEnglish(language)
