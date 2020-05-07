@@ -1,10 +1,4 @@
 
-import urllib2
-from bs4 import BeautifulSoup
-import Queue
-import sys
-import re
-import csv
 
 
 # IN ORDER TO AVOID CHARACTER ERRORS
